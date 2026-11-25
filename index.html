@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b1b3a" />
+<meta name="description" content="2026.12.10 ~ 12.13 니가타 3박 4일 여행 일정표" />
+<title>니가타 여행 · 2026.12.10 ~ 12.13</title>
+<style>
+  :root{
+    --navy:#0b1b3a;
+    --navy-2:#14264d;
+    --blue:#2563eb;
+    --blue-soft:#e8f0ff;
+    --ink:#111827;
+    --ink-2:#4b5563;
+    --ink-3:#8b95a5;
+    --line:#e5e9f0;
+    --bg:#f4f6fa;
+    --card:#ffffff;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:-0.01em;
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:0 0 40px;}
+
+  /* header */
+  header{
+    position:relative;
+    background:linear-gradient(160deg,#0b1b3a 0%,#14264d 62%,#1e3a66 100%);
+    color:#fff;
+    padding:calc(28px + env(safe-area-inset-top)) 22px 30px;
+    border-radius:0 0 26px 26px;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    width:260px;height:260px;
+    right:-90px;top:-110px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(96,165,250,.45),rgba(96,165,250,0) 70%);
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12px;font-weight:600;letter-spacing:.06em;
+    color:#bfd4ff;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.16);
+    padding:5px 11px;border-radius:999px;
+    position:relative;z-index:1;
+  }
+  h1{
+    position:relative;z-index:1;
+    margin:14px 0 6px;
+    font-size:27px;line-height:1.28;
+    font-weight:800;letter-spacing:-0.03em;
+  }
+  .sub{
+    position:relative;z-index:1;
+    margin:0;
+    font-size:14.5px;
+    color:#c9d8f5;
+    font-weight:500;
+  }
+  .dday{
+    position:relative;z-index:1;
+    display:flex;align-items:baseline;gap:8px;
+    margin-top:18px;
+    font-size:13px;color:#a9c0e6;
+  }
+  .dday strong{
+    font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;
+  }
+
+  /* sections */
+  main{padding:18px 14px 0;}
+  .section-title{
+    display:flex;align-items:center;gap:8px;
+    margin:22px 6px 10px;
+    font-size:12.5px;font-weight:700;
+    color:var(--ink-3);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .section-title::after{
+    content:"";flex:1;height:1px;background:var(--line);
+  }
+
+  /* day card */
+  .day{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 16px 14px;
+    margin-bottom:11px;
+    box-shadow:0 1px 2px rgba(16,24,40,.04);
+  }
+  .day-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .day-no{
+    flex:none;
+    width:34px;height:34px;
+    border-radius:11px;
+    background:var(--blue-soft);
+    color:var(--blue);
+    font-size:13px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .day-title{min-width:0;}
+  .day-title b{
+    display:block;font-size:16px;font-weight:700;letter-spacing:-0.02em;
+  }
+  .day-title span{
+    display:block;font-size:12.5px;color:var(--ink-3);font-weight:600;
+  }
+  .date-pill{
+    margin-left:auto;flex:none;
+    font-size:12.5px;font-weight:700;
+    color:var(--navy);
+    background:#eef2f9;
+    padding:4px 9px;border-radius:8px;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* timeline */
+  ol.steps{list-style:none;margin:0;padding:0 0 0 6px;}
+  ol.steps li{
+    position:relative;
+    padding:0 0 12px 20px;
+    font-size:15px;
+    color:var(--ink);
+  }
+  ol.steps li:last-child{padding-bottom:0;}
+  ol.steps li::before{
+    content:"";
+    position:absolute;left:0;top:8px;
+    width:7px;height:7px;border-radius:50%;
+    background:var(--blue);
+  }
+  ol.steps li::after{
+    content:"";
+    position:absolute;left:3px;top:17px;bottom:0;
+    width:1px;background:var(--line);
+  }
+  ol.steps li:last-child::after{display:none;}
+  ol.steps .t{
+    display:inline-block;
+    min-width:44px;
+    margin-right:8px;
+    font-size:13px;font-weight:700;
+    color:var(--blue);
+    font-variant-numeric:tabular-nums;
+  }
+  ol.steps .note{
+    display:block;
+    margin:2px 0 0 52px;
+    font-size:13px;color:var(--ink-2);
+  }
+
+  /* upcoming note */
+  .upcoming{
+    margin:20px 0 0;
+    background:linear-gradient(160deg,#eef4ff,#f7faff);
+    border:1px solid #d8e4fb;
+    border-radius:var(--radius);
+    padding:16px;
+  }
+  .upcoming b{
+    display:flex;align-items:center;gap:7px;
+    font-size:14.5px;color:var(--navy);margin-bottom:6px;
+  }
+  .upcoming p{
+    margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.6;
+  }
+
+  footer{
+    margin:26px 8px 0;
+    font-size:12px;color:var(--ink-3);
+    line-height:1.7;
+    text-align:center;
+  }
+  footer .dot{margin:0 6px;opacity:.5;}
+  .privacy{
+    margin:16px 8px 0;
+    font-size:11.5px;color:#9aa4b4;
+    background:#eef1f6;
+    border-radius:12px;
+    padding:10px 12px;
+    text-align:center;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0e1420;--card:#161e2c;--line:#25303f;
+      --ink:#eef2f8;--ink-2:#b6c0d0;--ink-3:#8b98ab;
+      --blue-soft:#1c2a45;
+    }
+    header{background:linear-gradient(160deg,#0a1526 0%,#11203c 65%,#1a3159 100%);}
+    .date-pill{background:#1e2a3c;color:#cfe0ff;}
+    .upcoming{background:linear-gradient(160deg,#152238,#17263c);border-color:#26374f;}
+    .upcoming b{color:#cfe0ff;}
+    .privacy{background:#161e2c;color:#8b98ab;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">NIIGATA · 3박 4일</span>
+    <h1>니가타 여행</h1>
+    <p class="sub">2026.12.10 (목) ~ 12.13 (일) · 쓰키오카 온천 &amp; 니가타 시내</p>
+    <div class="dday" id="dday"><strong>D-day</strong><span>여행까지</span></div>
+  </header>
+
+  <main>
+    <div class="section-title">일정 한눈에</div>
+
+    <section class="day">
+      <div class="day-head">
+        <div class="day-no">1</div>
+        <div class="day-title">
+          <b>입국 · 쓰키오카 온천</b>
+          <span>공항 → 헤기소바 → 박물관 → 료칸</span>
+        </div>
+        <div class="date-pill">12.10 목</div>
+      </div>
+      <ol class="steps">
+        <li><span class="t">오전</span>니가타 공항 도착 · 렌터카 픽업</li>
+        <li><span class="t">점심</span>헤기소바</li>
+        <li><span class="t">오후</span>북방문화박물관</li>
+        <li><span class="t">저녁</span>쓰키오카 온천 숙소 체크인<span class="note">석식 가이세키 · 유황온천</span></li>
+      </ol>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div class="day-no">2</div>
+        <div class="day-title">
+          <b>온천 → 니가타 시내</b>
+          <span>체크아웃 · 차량 반납 · 시내 숙소</span>
+        </div>
+        <div class="date-pill">12.11 금</div>
+      </div>
+      <ol class="steps">
+        <li><span class="t">오전</span>온천 아침 · 체크아웃</li>
+        <li><span class="t">11:30</span>니가타역 북쪽출구 렌터카 반납</li>
+        <li><span class="t">낮</span>시내 숙소 체크인 · 짐 정리</li>
+        <li><span class="t">저녁</span>니가타 시내 산책 · 저녁</li>
+      </ol>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div class="day-no">3</div>
+        <div class="day-title">
+          <b>니가타 시내 하루</b>
+          <span>센베 · 문구 · 쇼핑 · 야키니쿠</span>
+        </div>
+        <div class="date-pill">12.12 토</div>
+      </div>
+      <ol class="steps">
+        <li><span class="t">오전</span>니가타역 앞 시내 산책 · 카페</li>
+        <li><span class="t">낮</span>센베 · 문구 · 쇼핑 (CoCoLo 등)</li>
+        <li><span class="t">18:30</span>야키니쿠 저녁 (4인)</li>
+      </ol>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div class="day-no">4</div>
+        <div class="day-title">
+          <b>귀국</b>
+          <span>조식 · 체크아웃 · 공항 이동</span>
+        </div>
+        <div class="date-pill">12.13 일</div>
+      </div>
+      <ol class="steps">
+        <li><span class="t">오전</span>숙소 조식 · 체크아웃</li>
+        <li><span class="t">이동</span>니가타 공항으로 이동</li>
+        <li><span class="t">귀국</span>인천 도착</li>
+      </ol>
+    </section>
+
+    <div class="upcoming">
+      <b>🚧 업데이트 예정</b>
+      <p>상세 일정 · 식당 · 준비물 체크리스트는 이 페이지에 계속 채워집니다.<br>
+      링크는 그대로 두고 새로고침만 하면 항상 최신 내용을 볼 수 있어요.</p>
+    </div>
+  </main>
+
+  <footer>
+    <span id="updated">업데이트</span>
+    <span class="dot">·</span>
+    함께 보는 공유용 일정표
+  </footer>
+
+  <div class="privacy">
+    공개 링크라서 예약번호 · 연락처 · 결제금액 같은 정보는 올리지 않습니다.
+  </div>
+
+</div>
+
+<script>
+(function(){
+  try{
+    var start = new Date(2026, 11, 10); // 2026-12-10 (로컬 기준)
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var diff = Math.round((start - today) / 86400000);
+    var label = diff > 0 ? ('D-' + diff) : (diff === 0 ? 'D-DAY' : ('여행 종료 +' + Math.abs(diff) + '일'));
+    var el = document.getElementById('dday');
+    if (el) {
+      el.innerHTML = '<strong>' + label + '</strong><span>' + (diff > 0 ? '여행까지' : (diff === 0 ? '오늘이 출발일!' : '다녀온 여행')) + '</span>';
+    }
+  }catch(e){}
+
+  try{
+    var d = new Date(2026, 10, 25);
+    var u = document.getElementById('updated');
+    if (u) {
+      u.textContent = '업데이트 ' + d.getFullYear() + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + String(d.getDate()).padStart(2,'0');
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
