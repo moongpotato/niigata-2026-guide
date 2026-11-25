@@ -182,6 +182,112 @@
     margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.6;
   }
 
+  /* ---------- 여행 방명록 ---------- */
+  .guest{
+    margin:14px 0 0;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 16px 15px;
+    box-shadow:0 1px 2px rgba(16,24,40,.04);
+  }
+  .guest-head{display:flex;align-items:baseline;gap:7px;}
+  .guest-head b{
+    font-size:16px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);
+  }
+  .guest-head .cnt{
+    margin-left:auto;flex:none;
+    font-size:11.5px;font-weight:700;color:var(--ink-3);
+    background:#f1f4f9;border-radius:999px;padding:2px 9px;
+    font-variant-numeric:tabular-nums;
+  }
+  .guest-sub{
+    margin:3px 0 13px;
+    font-size:12.5px;color:var(--ink-3);line-height:1.5;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+  .chip{
+    appearance:none;-webkit-appearance:none;
+    border:1px solid var(--line);background:#f7f9fc;color:var(--ink-2);
+    font-family:inherit;font-size:13px;font-weight:700;letter-spacing:-0.01em;
+    padding:6px 13px;border-radius:999px;cursor:pointer;line-height:1.4;
+    transition:background .12s ease,border-color .12s ease,color .12s ease;
+  }
+  .chip:active{transform:scale(.97);}
+  .chip.on{background:var(--blue-soft);border-color:#c4d7ff;color:var(--blue);}
+  .g-textwrap{position:relative;}
+  .g-text{
+    display:block;width:100%;
+    border:1px solid var(--line);border-radius:14px;
+    background:var(--bg);
+    padding:11px 12px;
+    font-family:inherit;font-size:14.5px;line-height:1.55;color:var(--ink);
+    letter-spacing:-0.01em;
+    min-height:70px;resize:none;
+  }
+  .g-text::placeholder{color:#a9b2c0;}
+  .g-text:focus{outline:none;border-color:#bdcff5;background:var(--card);}
+  .g-row{display:flex;align-items:center;gap:8px;margin-top:9px;}
+  .g-name{
+    display:none;flex:1;min-width:0;
+    border:1px solid var(--line);border-radius:11px;background:var(--bg);
+    padding:8px 11px;font-family:inherit;font-size:13.5px;color:var(--ink);
+  }
+  .g-name.show{display:block;}
+  .g-name:focus{outline:none;border-color:#bdcff5;background:var(--card);}
+  .g-count{
+    margin-left:auto;flex:none;
+    font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  }
+  .g-send{
+    flex:none;border:0;border-radius:12px;
+    background:var(--blue);color:#fff;
+    font-family:inherit;font-size:14px;font-weight:800;letter-spacing:-0.01em;
+    padding:9px 17px;cursor:pointer;
+    box-shadow:0 2px 6px rgba(37,99,235,.24);
+    transition:opacity .12s ease;
+  }
+  .g-send:active{transform:scale(.98);}
+  .g-send:disabled{opacity:.45;box-shadow:none;cursor:default;}
+  .g-status{
+    margin:8px 2px 0;min-height:16px;
+    font-size:11.5px;color:var(--ink-3);line-height:1.5;
+  }
+  .g-status.err{color:#d14343;}
+
+  .g-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:11px;}
+  .g-item{display:flex;align-items:flex-start;gap:9px;}
+  .g-ava{
+    flex:none;width:30px;height:30px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12.5px;font-weight:800;letter-spacing:-0.02em;
+    background:#eef2f9;color:#4b6b9e;
+  }
+  .g-bubble{
+    position:relative;min-width:0;max-width:100%;
+    background:#f7f9fd;
+    border:1px solid var(--line);
+    border-radius:3px 14px 14px 14px;
+    padding:8px 12px 9px;
+  }
+  .g-top{display:flex;align-items:baseline;gap:7px;margin-bottom:1px;}
+  .g-who{font-size:12.5px;font-weight:800;color:var(--navy);letter-spacing:-0.01em;}
+  .g-time{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums;}
+  .g-msg{
+    margin:0;font-size:14px;line-height:1.55;color:var(--ink);
+    white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;
+  }
+  .g-empty{
+    margin:14px 0 0;padding:16px 12px;
+    border:1px dashed #dbe3ef;border-radius:14px;
+    text-align:center;font-size:12.5px;line-height:1.6;color:var(--ink-3);
+    background:#fbfcfe;
+  }
+  .g-note{
+    margin:12px 0 0;font-size:11px;line-height:1.6;color:#9aa4b4;
+    background:#eef1f6;border-radius:11px;padding:9px 11px;
+  }
+
   footer{
     margin:26px 8px 0;
     font-size:12px;color:var(--ink-3);
@@ -208,6 +314,17 @@
     .upcoming{background:linear-gradient(160deg,#152238,#17263c);border-color:#26374f;}
     .upcoming b{color:#cfe0ff;}
     .privacy{background:#161e2c;color:#8b98ab;}
+    .guest-head .cnt{background:#1e2a3c;color:#8b98ab;}
+    .chip{background:#1a2231;border-color:#2a3546;color:#b6c0d0;}
+    .chip.on{background:#1c2a45;border-color:#33496d;color:#9dc0ff;}
+    .g-text{background:#121a27;border-color:#2a3546;color:#eef2f8;}
+    .g-text:focus{background:#161e2c;border-color:#3a5280;}
+    .g-name{background:#121a27;border-color:#2a3546;color:#eef2f8;}
+    .g-ava{background:#1e2a3c;color:#a8c4ee;}
+    .g-bubble{background:#18202f;border-color:#2a3546;}
+    .g-who{color:#cfe0ff;}
+    .g-empty{background:#141c29;border-color:#26303f;}
+    .g-note{background:#161e2c;color:#8b98ab;}
   }
 </style>
 </head>
@@ -295,6 +412,33 @@
       <p>상세 일정 · 식당 · 준비물 체크리스트는 이 페이지에 계속 채워집니다.<br>
       링크는 그대로 두고 새로고침만 하면 항상 최신 내용을 볼 수 있어요.</p>
     </div>
+
+    <section class="guest" id="guest">
+      <div class="guest-head">
+        <b>📝 여행 방명록</b>
+        <span class="cnt" id="g-count">0</span>
+      </div>
+      <p class="guest-sub">여행 전에 한마디씩 남겨 주세요. 다 같이 보여요 🙌</p>
+
+      <div class="chips" id="g-chips"></div>
+
+      <div class="g-textwrap">
+        <textarea class="g-text" id="g-text" maxlength="200" rows="2" placeholder="가고 싶은 곳, 먹고 싶은 것, 하고 싶은 말 한마디 🍊"></textarea>
+      </div>
+
+      <div class="g-row">
+        <input class="g-name" id="g-name" type="text" maxlength="12" placeholder="이름 (예: 승학)" />
+        <span class="g-count" id="g-len">0/200</span>
+        <button class="g-send" id="g-send" type="button">남기기</button>
+      </div>
+
+      <p class="g-status" id="g-status"></p>
+
+      <ul class="g-list" id="g-list"></ul>
+      <div class="g-empty" id="g-empty">아직 남긴 한마디가 없어요.<br>첫 번째 방명록을 남겨 보세요 ✍️</div>
+
+      <p class="g-note">🔒 공개 페이지예요. 연락처·예약번호 같은 개인정보는 남기지 말아 주세요.</p>
+    </section>
   </main>
 
   <footer>
@@ -330,6 +474,232 @@
       u.textContent = '업데이트 ' + d.getFullYear() + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + String(d.getDate()).padStart(2,'0');
     }
   }catch(e){}
+})();
+</script>
+
+<script>
+/* 여행 방명록 — Google Sheets(Apps Script Web App) 연동 */
+(function(){
+  var WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwInkfX67BCJYPbMWW-50gTgvh-rORsobnkGGZcTamjeFNivjKVMYMFB5hK0wmM_Yn8/exec';
+  var PEOPLE = ['문수', '정현', '현수', '현지'];
+  var MAX = 200;
+
+  var elChips = document.getElementById('g-chips');
+  var elText = document.getElementById('g-text');
+  var elName = document.getElementById('g-name');
+  var elSend = document.getElementById('g-send');
+  var elStatus = document.getElementById('g-status');
+  var elList = document.getElementById('g-list');
+  var elEmpty = document.getElementById('g-empty');
+  var elCount = document.getElementById('g-count');
+  var elLen = document.getElementById('g-len');
+
+  var picked = '문수';
+  var custom = false;
+  var sending = false;
+
+  var AVATAR = {
+    '문수': ['#e8f0ff', '#2563eb'],
+    '정현': ['#ffe9f1', '#e0559a'],
+    '현수': ['#e6f7ee', '#1f9d63'],
+    '현지': ['#fff3e0', '#d98324']
+  };
+
+  function buildChips(){
+    PEOPLE.forEach(function(name){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = name;
+      b.setAttribute('data-name', name);
+      b.addEventListener('click', function(){
+        custom = false;
+        picked = name;
+        elName.classList.remove('show');
+        elName.value = '';
+        syncChips();
+        elText.focus();
+      });
+      elChips.appendChild(b);
+    });
+    var c = document.createElement('button');
+    c.type = 'button';
+    c.className = 'chip';
+    c.id = 'g-chip-custom';
+    c.textContent = '직접 입력';
+    c.addEventListener('click', function(){
+      custom = true;
+      syncChips();
+      elName.classList.add('show');
+      elName.focus();
+    });
+    elChips.appendChild(c);
+    syncChips();
+  }
+
+  function syncChips(){
+    var kids = elChips.children;
+    for (var i = 0; i < kids.length; i++){
+      var n = kids[i].getAttribute('data-name');
+      var on = custom ? kids[i].id === 'g-chip-custom' : (n === picked);
+      kids[i].className = 'chip' + (on ? ' on' : '');
+    }
+  }
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+
+  function niceTime(ts){
+    if (!ts) return '';
+    var s = String(ts).replace('T', ' ');
+    var m = s.match(/^(\d{4})-(\d{2})-(\d{2})[ ](\d{2}):(\d{2})/);
+    if (!m) return s;
+    var now = new Date();
+    var today = '' + now.getFullYear() + pad(now.getMonth()+1) + pad(now.getDate());
+    var that = m[1] + m[2] + m[3];
+    if (today === that) return '오늘 ' + m[4] + ':' + m[5];
+    return m[2] + '.' + m[3] + ' ' + m[4] + ':' + m[5];
+  }
+
+  function avatarOf(name){
+    var c = AVATAR[name] || ['#eef2f9', '#4b6b9e'];
+    return c;
+  }
+
+  function render(list){
+    elList.innerHTML = '';
+    if (!list || !list.length){
+      elEmpty.style.display = 'block';
+      elCount.textContent = '0';
+      return;
+    }
+    elEmpty.style.display = 'none';
+    elCount.textContent = list.length + '개';
+    list.forEach(function(item){
+      var li = document.createElement('li');
+      li.className = 'g-item';
+
+      var av = document.createElement('div');
+      av.className = 'g-ava';
+      var col = avatarOf(item.author);
+      av.style.background = col[0];
+      av.style.color = col[1];
+      av.textContent = String(item.author || '익').slice(0, 1);
+
+      var bub = document.createElement('div');
+      bub.className = 'g-bubble';
+
+      var top = document.createElement('div');
+      top.className = 'g-top';
+      var who = document.createElement('span');
+      who.className = 'g-who';
+      who.textContent = item.author || '익명';
+      var tm = document.createElement('span');
+      tm.className = 'g-time';
+      tm.textContent = niceTime(item.timestamp);
+      top.appendChild(who);
+      top.appendChild(tm);
+
+      var msg = document.createElement('p');
+      msg.className = 'g-msg';
+      msg.textContent = item.comment || '';
+
+      bub.appendChild(top);
+      bub.appendChild(msg);
+      li.appendChild(av);
+      li.appendChild(bub);
+      elList.appendChild(li);
+    });
+  }
+
+  function status(text, isErr){
+    elStatus.textContent = text || '';
+    elStatus.className = 'g-status' + (isErr ? ' err' : '');
+  }
+
+  function load(silent){
+    if (!silent) status('불러오는 중…');
+    var url = WEB_APP_URL + (WEB_APP_URL.indexOf('?') > -1 ? '&' : '?') + 't=' + Date.now();
+    fetch(url, { method: 'GET', cache: 'no-store' })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data && data.ok){
+          render(data.comments || []);
+          status('');
+        } else {
+          status('방명록을 불러오지 못했어요. 잠시 후 새로고침해 주세요.', true);
+        }
+      })
+      .catch(function(){
+        status('방명록을 불러오지 못했어요. 잠시 후 새로고침해 주세요.', true);
+      });
+  }
+
+  function currentAuthor(){
+    if (custom){
+      var v = (elName.value || '').trim();
+      return v.slice(0, 12);
+    }
+    return picked;
+  }
+
+  function submit(){
+    if (sending) return;
+    var author = currentAuthor();
+    var text = (elText.value || '').trim().replace(/\r/g, '').slice(0, MAX);
+
+    if (!author){
+      status('이름을 한 글자 이상 적어 주세요.', true);
+      elName.focus();
+      return;
+    }
+    if (!text){
+      status('한마디를 적어 주세요.', true);
+      elText.focus();
+      return;
+    }
+
+    sending = true;
+    elSend.disabled = true;
+    status('남기는 중…');
+
+    fetch(WEB_APP_URL, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-store',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ author: author, comment: text })
+    })
+      .then(function(r){ return r.text(); })
+      .catch(function(){ return ''; })
+      .then(function(){
+        elText.value = '';
+        elLen.textContent = '0/' + MAX;
+        status('남겼어요 ✓');
+        setTimeout(function(){ load(true); }, 900);
+        setTimeout(function(){ load(true); }, 2200);
+      })
+      .then(function(){
+        sending = false;
+        elSend.disabled = false;
+      });
+  }
+
+  elText.addEventListener('input', function(){
+    var n = elText.value.length;
+    if (n > MAX) { elText.value = elText.value.slice(0, MAX); n = MAX; }
+    elLen.textContent = n + '/' + MAX;
+  });
+
+  elSend.addEventListener('click', submit);
+  elText.addEventListener('keydown', function(e){
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter'){ submit(); }
+  });
+  elName.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ e.preventDefault(); elText.focus(); }
+  });
+
+  buildChips();
+  load(true);
 })();
 </script>
 </body>
