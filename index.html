@@ -499,6 +499,8 @@
   var picked = '문수';
   var custom = false;
   var sending = false;
+  var items = [];
+  var pending = null;
 
   var AVATAR = {
     '문수': ['#e8f0ff', '#2563eb'],
@@ -572,15 +574,16 @@
   }
 
   function render(list){
+    items = (list || []).slice();
     elList.innerHTML = '';
-    if (!list || !list.length){
+    if (!items.length){
       elEmpty.style.display = 'block';
       elCount.textContent = '0';
       return;
     }
     elEmpty.style.display = 'none';
-    elCount.textContent = list.length + '개';
-    list.forEach(function(item){
+    elCount.textContent = items.length + '개';
+    items.forEach(function(item){
       var li = document.createElement('li');
       li.className = 'g-item';
 
@@ -629,8 +632,14 @@
       .then(function(r){ return r.json(); })
       .then(function(data){
         if (data && data.ok){
-          render(data.comments || []);
-          status('');
+          var list = data.comments || [];
+          render(list);
+          if (pending){
+            var found = list.some(function(x){
+              return x.author === pending.author && x.comment === pending.comment;
+            });
+            if (found){ pending = null; status(''); }
+          }
         } else {
           status('방명록을 불러오지 못했어요. 잠시 후 새로고침해 주세요.', true);
         }
@@ -676,13 +685,26 @@
       body: JSON.stringify({ author: author, comment: text })
     })
       .then(function(r){ return r.text(); })
-      .catch(function(){ return ''; })
       .then(function(){
+        var now = new Date();
+        pending = { author: author, comment: text };
         elText.value = '';
         elLen.textContent = '0/' + MAX;
+        items.unshift({
+          timestamp: now.getFullYear() + '-' + pad(now.getMonth()+1) + '-' + pad(now.getDate()) + ' ' + pad(now.getHours()) + ':' + pad(now.getMinutes()),
+          author: author,
+          comment: text
+        });
+        render(items);
         status('남겼어요 ✓');
-        setTimeout(function(){ load(true); }, 900);
-        setTimeout(function(){ load(true); }, 2200);
+        setTimeout(function(){ load(true); }, 1200);
+        setTimeout(function(){
+          load(true);
+          if (pending) status('남긴 글이 확인되지 않아요. 잠시 후 새로고침해 주세요.', true);
+        }, 3500);
+      })
+      .catch(function(){
+        status('남기지 못했어요. 잠시 후 다시 시도해 주세요.', true);
       })
       .then(function(){
         sending = false;
