@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0b1b3a" />
 <meta name="description" content="2026.12.10 ~ 12.13 니가타 3박 4일 여행 일정표" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="니가타 여행 · 2026.12.10 ~ 12.13" />
+<meta property="og:description" content="쓰키오카 온천 &amp; 니가타 시내 3박 4일 일정표" />
+<meta property="og:url" content="https://moongpotato.github.io/niigata-2026-guide/" />
+<meta property="og:site_name" content="니가타 여행" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary" />
 <title>니가타 여행 · 2026.12.10 ~ 12.13</title>
 <style>
   :root{
@@ -328,6 +335,179 @@
     .g-empty{background:#141c29;border-color:#26303f;}
     .g-note{background:#161e2c;color:#8b98ab;}
   }
+  /* ---------- v1.4 상세 일정 ---------- */
+  .party{
+    position:relative;z-index:1;
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+    margin-top:17px;
+  }
+  .party .who{font-size:12px;font-weight:700;color:#a9c0e6;margin-right:2px;}
+  .party .p{
+    font-size:12.5px;font-weight:700;color:#fff;letter-spacing:-0.01em;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    padding:4px 11px;border-radius:999px;
+  }
+  .facts{
+    position:relative;z-index:1;
+    display:flex;flex-wrap:wrap;gap:6px;
+    margin-top:9px;
+  }
+  .facts .fact{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:12px;font-weight:600;color:#d5e1f7;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    padding:5px 10px;border-radius:9px;
+    font-variant-numeric:tabular-nums;
+  }
+  .facts .fact b{font-weight:400;font-size:12px;}
+
+  ol.steps li b{font-weight:700;}
+  ol.steps li.opt::before{background:#e0a03a;}
+  ol.steps li.opt .t{color:#b26a00;min-width:44px;}
+
+  .tag{
+    display:inline-block;margin-right:4px;
+    font-size:10.5px;font-weight:800;letter-spacing:-0.01em;
+    color:#9a5f00;background:#fff3dc;border-radius:6px;
+    padding:1px 6px;vertical-align:1px;
+  }
+  .tag.ok{color:#177a4c;background:#e4f7ec;}
+
+  a.map{
+    display:inline-flex;align-items:center;gap:3px;
+    margin-top:5px;
+    font-size:12px;font-weight:700;color:var(--blue);
+    text-decoration:none;
+    background:var(--blue-soft);
+    padding:3px 9px;border-radius:8px;
+  }
+  a.map::before{content:"📍";font-size:10px;}
+
+  /* generic card */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px;
+    margin-bottom:11px;
+    box-shadow:0 1px 2px rgba(16,24,40,.04);
+  }
+  .card > b.card-t{
+    display:block;font-size:15px;font-weight:800;letter-spacing:-0.03em;
+    margin-bottom:9px;
+  }
+  .card p{
+    margin:0 0 10px;font-size:13.5px;color:var(--ink-2);line-height:1.66;
+  }
+  .card p:last-child{margin-bottom:0;}
+  .card p b{color:var(--ink);font-weight:700;}
+
+  /* checklist */
+  .ck-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .ck-head b{font-size:15px;font-weight:800;letter-spacing:-0.03em;}
+  .ck-head span{
+    margin-left:auto;flex:none;
+    font-size:12.5px;font-weight:800;color:var(--blue);
+    font-variant-numeric:tabular-nums;
+  }
+  .ck-bar{height:6px;border-radius:999px;background:#eef2f9;overflow:hidden;margin-bottom:8px;}
+  .ck-bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--blue);transition:width .2s ease;}
+  ul.ck{list-style:none;margin:0;padding:0;}
+  ul.ck li{border-top:1px solid var(--line);}
+  ul.ck li:first-child{border-top:0;}
+  ul.ck label{display:flex;align-items:flex-start;gap:10px;padding:11px 0;cursor:pointer;}
+  ul.ck input{position:absolute;opacity:0;width:0;height:0;}
+  ul.ck .box{
+    flex:none;width:20px;height:20px;margin-top:1px;
+    border:1.5px solid #c9d3e3;border-radius:6px;background:#fff;
+    display:flex;align-items:center;justify-content:center;
+    transition:background .12s ease,border-color .12s ease;
+  }
+  ul.ck .box::after{
+    content:"";width:10px;height:6px;
+    border-left:2px solid #fff;border-bottom:2px solid #fff;
+    transform:rotate(-45deg) scale(.55);opacity:0;margin-top:-3px;
+    transition:opacity .12s ease,transform .12s ease;
+  }
+  ul.ck input:checked + .box{background:var(--blue);border-color:var(--blue);}
+  ul.ck input:checked + .box::after{opacity:1;transform:rotate(-45deg) scale(1);}
+  ul.ck input:focus-visible + .box{outline:2px solid #bdcff5;outline-offset:2px;}
+  ul.ck .txt{font-size:14px;line-height:1.5;color:var(--ink);letter-spacing:-0.01em;}
+  ul.ck .txt b{font-weight:700;}
+  ul.ck .txt em{
+    display:block;font-style:normal;
+    font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:2px;
+  }
+  ul.ck input:checked ~ .txt{color:var(--ink-3);}
+  ul.ck input:checked ~ .txt b{text-decoration:line-through;text-decoration-color:#c3ccdb;}
+  .ck-reset{
+    margin-top:11px;appearance:none;-webkit-appearance:none;
+    border:1px solid var(--line);background:#f7f9fc;color:var(--ink-2);
+    font-family:inherit;font-size:12.5px;font-weight:700;letter-spacing:-0.01em;
+    padding:7px 12px;border-radius:10px;cursor:pointer;
+  }
+
+  /* weather table */
+  table.wx{width:100%;border-collapse:collapse;margin:2px 0 11px;font-size:12.5px;}
+  table.wx th{
+    font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;
+    text-align:left;padding:0 6px 6px 0;border-bottom:1px solid var(--line);
+  }
+  table.wx td{
+    padding:7px 6px 7px 0;border-bottom:1px solid var(--line);
+    color:var(--ink-2);vertical-align:top;font-variant-numeric:tabular-nums;
+  }
+  table.wx td:first-child{font-weight:800;color:var(--ink);width:46px;}
+  table.wx tr:last-child td{border-bottom:0;}
+
+  /* tips list */
+  ul.tips{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;}
+  ul.tips li{
+    position:relative;padding-left:14px;
+    font-size:13.5px;line-height:1.62;color:var(--ink-2);
+  }
+  ul.tips li::before{
+    content:"";position:absolute;left:2px;top:8px;
+    width:5px;height:5px;border-radius:50%;background:#c2cfe3;
+  }
+  ul.tips li b{color:var(--ink);font-weight:700;}
+
+  /* map list */
+  ul.maplist{list-style:none;margin:0;padding:0;}
+  ul.maplist li{border-top:1px solid var(--line);}
+  ul.maplist li:first-child{border-top:0;}
+  ul.maplist a{
+    display:flex;align-items:center;gap:10px;
+    padding:11px 0;text-decoration:none;
+  }
+  ul.maplist .m{min-width:0;flex:1;}
+  ul.maplist .m b{
+    display:block;font-size:14px;font-weight:700;color:var(--ink);
+    letter-spacing:-0.02em;line-height:1.4;
+  }
+  ul.maplist .m .d{
+    display:block;font-size:12px;color:var(--ink-3);
+    margin-top:1px;font-weight:500;
+  }
+  ul.maplist .go{
+    flex:none;font-size:11.5px;font-weight:800;color:var(--blue);
+    background:var(--blue-soft);border-radius:8px;padding:4px 9px;
+  }
+
+  @media (prefers-color-scheme:dark){
+    .ck-bar{background:#1e2a3c;}
+    ul.ck .box{background:#121a27;border-color:#33414f;}
+    ul.ck input:checked + .box{background:var(--blue);border-color:var(--blue);}
+    .ck-reset{background:#1a2231;border-color:#2a3546;color:#b6c0d0;}
+    .tag{background:#3a2a12;color:#f0b45c;}
+    .tag.ok{background:#12301f;color:#6fd3a0;}
+    a.map,.go{color:#9dc0ff !important;}
+    ul.tips li::before{background:#3d4b60;}
+    ol.steps li.opt::before{background:#e0a03a;}
+    ol.steps li.opt .t{color:#f0b45c;}
+  }
 </style>
 </head>
 <body>
@@ -337,6 +517,22 @@
     <span class="eyebrow">NIIGATA · 3박 4일</span>
     <h1>니가타 여행</h1>
     <p class="sub">2026.12.10 (목) ~ 12.13 (일) · 쓰키오카 온천 &amp; 니가타 시내</p>
+
+    <div class="party">
+      <span class="who">일행 4명</span>
+      <span class="p">문수</span>
+      <span class="p">정현</span>
+      <span class="p">현수</span>
+      <span class="p">현지</span>
+    </div>
+
+    <div class="facts">
+      <span class="fact"><b>✈️</b>12.10 08:20 ICN → 10:25 KIJ</span>
+      <span class="fact"><b>♨️</b>쓰키오카 1박 → 시내 2박</span>
+      <span class="fact"><b>🚗</b>4WD 렌터카 · 운전 현수</span>
+      <span class="fact"><b>🍖</b>야키니쿠 예약 12.12</span>
+    </div>
+
     <div class="dday" id="dday"><strong>D-day</strong><span>여행까지</span></div>
   </header>
 
@@ -353,10 +549,18 @@
         <div class="date-pill">12.10 목</div>
       </div>
       <ol class="steps">
-        <li><span class="t">오전</span>니가타 공항 도착 · 렌터카 픽업</li>
-        <li><span class="t">점심</span>헤기소바</li>
-        <li><span class="t">오후</span>북방문화박물관</li>
-        <li><span class="t">저녁</span>쓰키오카 온천 숙소 체크인<span class="note">석식 가이세키 · 유황온천</span></li>
+        <li><span class="t">오전</span>시흥에서 차로 동승 출발 · 인천공항 제2여객터미널 예약주차장
+          <span class="note">08:20 출발편 기준 <b>06:20까지 T2 도착</b>을 목표로. 주차는 12.10~13.</span></li>
+        <li><span class="t">08:20</span>인천(ICN) 출발 → <b>10:25</b> 니가타(KIJ) 도착
+          <span class="note">공항 대기 + 비행기에서 《듄》 1·2편. 1편 2시간 30분 · 2편 2시간 46분이라 <b>출발 전 오프라인 저장</b> 필수 — 1편은 대기실에서, 2편은 오는 비행기 몫으로 나누면 딱 맞아요.</span></li>
+        <li><span class="t">11:30</span>니가타공항 <b>닛폰렌터카</b> 픽업
+          <span class="note">4WD · 운전자 현수. 국제운전면허증(제네바 협약)은 현수 몫이에요.</span></li>
+        <li><span class="t">12:30</span>점심 · 코지마야 총본점 마쓰자키점
+          <span class="note">전통 헤기소바 — 해초(후노리)를 섞은 소바를 넓은 접시 '헤기'에 나눠 담아내는 니가타 남부의 소바예요. 공항에서 차로 9분(2.8km) · 영업 11:00~21:00.<br>운전자 현수는 낮 술 없음. 술은 저녁 료칸에서 같이 🍶<br><a class="map" href="https://maps.google.com/?cid=11102908488333533839" target="_blank" rel="noopener">코지마야 마쓰자키점 지도</a></span></li>
+        <li><span class="t">오후</span>북방문화박물관
+          <span class="note">성인 800엔 · 승용차 무료 주차 · 9:00~17:00. 마쓰자키점에서 차로 23분(15.3km).<br>옛 대지주의 저택과 정원, 민속자료까지 — 비 오는 날 실내 위주로 돌기 좋아요.<br><a class="map" href="https://maps.google.com/?cid=17675836771346357710" target="_blank" rel="noopener">북방문화박물관 지도</a></span></li>
+        <li><span class="t">15:00</span>쓰키오카 온천 <b>센케이 료칸</b> 체크인
+          <span class="note">석식 가이세키 · 유황 노천온천. 박물관에서 차로 32분(20.4km).<br>객실 안 주류·안주 반입은 콜키지 무료 — 다만 로비·복도에서는 내용물이 안 보이는 가방이나 봉투에 넣어 조용히 옮겨 주세요.<br><a class="map" href="https://maps.google.com/?cid=17945737093079462673" target="_blank" rel="noopener">센케이 료칸 지도</a></span></li>
       </ol>
     </section>
 
@@ -365,15 +569,27 @@
         <div class="day-no">2</div>
         <div class="day-title">
           <b>온천 → 니가타 시내</b>
-          <span>체크아웃 · 차량 반납 · 시내 숙소</span>
+          <span>체크아웃 · 차량 반납 · 사케 · 시내 2박</span>
         </div>
         <div class="date-pill">12.11 금</div>
       </div>
       <ol class="steps">
-        <li><span class="t">오전</span>온천 아침 · 체크아웃</li>
-        <li><span class="t">11:30</span>니가타역 북쪽출구 렌터카 반납</li>
-        <li><span class="t">낮</span>시내 숙소 체크인 · 짐 정리</li>
-        <li><span class="t">저녁</span>니가타 시내 산책 · 저녁</li>
+        <li><span class="t">오전</span>아침 온천 &amp; 료칸 조식 → <b>10:00 체크아웃</b>
+          <span class="note">유황 노천온천 한 번 더. 체크아웃 전에 짐부터 정리해 두면 뒤가 편해요.</span></li>
+        <li class="opt"><span class="t">10:15</span><span class="tag">선택</span> 이온몰 시바타 1층 <b>coca(코카)</b>
+          <span class="note">료칸에서 차로 15분(10.2km) · 10:00~21:00. 니가타현 유일 매장이라 여기서만 볼 수 있어요.<br>10:00 체크아웃 → 10:15 도착. <b>20분 정도만 보고 10:40 출발</b>하면 11:20 니가타역(28.4km·약 38분)이라 반납 11:30에 맞아요. 더 여유를 두려면 10:30엔 나와야 합니다.<br>3일차로 미루면 JR 왕복만 1시간 반(니가타 10:39 → 니시시바타 11:22, 43분·440엔, 역에서 도보 1분) — 차 있을 때 들르는 쪽이 낫습니다.<br><a class="map" href="https://maps.google.com/?cid=9776251242071529136" target="_blank" rel="noopener">이온몰 시바타 지도</a></span></li>
+        <li><span class="t">11:30</span>니가타역 북쪽출구 <b>렌터카 반납</b>
+          <span class="note">반납 전 주유 필수. 반납하고 도보 7분(500m)이면 숙소예요.</span></li>
+        <li><span class="t">낮</span><span class="tag">미정</span> 점심 — 니가타역 앞
+          <span class="note">아직 안 정했어요. 역 안 CoCoLo 2층이나 역 앞에서 가볍게. 짐은 APA 프런트에 먼저 맡기고 움직이면 편합니다.</span></li>
+        <li><span class="t">13:00</span>이마요츠카사 사케 양조장 견학
+          <span class="note">역에서 도보 15분(1.1km) · 예약제 1인 200엔 · 약 30~40분. 금요일 회차는 9:10 · 10:00 · 11:00 · 13:00 · 14:00 · 15:00 · 15:30.<br>시음은 견학 뒤에 — 무료 시음은 계절주 1종과 아마자케, 프리미엄은 10종 이상 1,500엔. 차는 이미 반납했으니 넷 다 OK.<br><a class="map" href="https://maps.google.com/?cid=12656739929488405213" target="_blank" rel="noopener">이마요츠카사 지도</a></span></li>
+        <li><span class="t">15:00</span><b>APA 호텔 &amp; 리조트 니가타에키마에오도리</b> 체크인 <span class="tag ok">2박</span>
+          <span class="note">니가타역 북쪽출구 도보 7분. 12.11 저녁 <b>상온 택배 수령</b> 예정 — 송장에 체크인 날짜(12/11)와 예약자 이름을 적어야 보관해 줍니다. 쿨택배는 안 돼요.<br><a class="map" href="https://maps.google.com/?cid=5551224370743991501" target="_blank" rel="noopener">APA 호텔 지도</a></span></li>
+        <li><span class="t">오후</span>폰슈칸 — 니가타 사케 자판기
+          <span class="note">CoCoLo 메츠관 9:30~20:30(최종 20:15). 시음 코인 5개에 1,000엔(2026.7부터). 20세 미만·아이 동반은 입장 불가예요.<br><a class="map" href="https://maps.google.com/?cid=4011428493525153067" target="_blank" rel="noopener">폰슈칸 지도</a></span></li>
+        <li><span class="t">저녁</span>니가타 제철 해산물 &amp; 로컬 이자카야
+          <span class="note">12월 제철은 방어(부리) · 노도구로 · 남쪽 새우(南蛮えび). 역 앞 이자카야 골목에서.</span></li>
       </ol>
     </section>
 
@@ -382,14 +598,23 @@
         <div class="day-no">3</div>
         <div class="day-title">
           <b>니가타 시내 하루</b>
-          <span>센베 · 문구 · 쇼핑 · 야키니쿠</span>
+          <span>카이센동 · 쇼핑 · 야키니쿠</span>
         </div>
         <div class="date-pill">12.12 토</div>
       </div>
       <ol class="steps">
-        <li><span class="t">오전</span>니가타역 앞 시내 산책 · 카페</li>
-        <li><span class="t">낮</span>센베 · 문구 · 쇼핑 (CoCoLo 등)</li>
-        <li><span class="t">18:30</span>야키니쿠 저녁 (4인)</li>
+        <li><span class="t">오전</span>피아반다이 카이센동 또는 시내 산책 · 카페
+          <span class="note">피아반다이는 9:00 오픈, APA에서 도보 12분(0.9km). 아침부터 해산물 덮밥. 비 오면 역 안 카페로 바꿔도 좋아요.<br><a class="map" href="https://maps.google.com/?cid=3245094026004741130" target="_blank" rel="noopener">피아반다이 지도</a></span></li>
+        <li><span class="t">낮</span>CoCoLo 니가타 — 2층 바카우케 스테이션 · 문구점
+          <span class="note">10:00~20:30. 센베 뽑기·굽기 체험에 문구점까지 — 학용품은 여기서.<br><a class="map" href="https://maps.google.com/?cid=4717242293801703807" target="_blank" rel="noopener">CoCoLo 니가타 지도</a></span></li>
+        <li><span class="t">낮</span>러브라 반다이 — <b>유니클로 · GU · 글로벌워크</b>
+          <span class="note">역에서 도보 9분. 유니클로와 글로벌워크는 1층, GU는 4층. 10:00~20:00이라 셋 다 한 건물에서 한 번에 봅니다.<br><a class="map" href="https://maps.google.com/?cid=16145496202669268121" target="_blank" rel="noopener">러브라 반다이 지도</a></span></li>
+        <li class="opt"><span class="t">낮</span><span class="tag">선택</span> coca 이온몰 시바타 — 2일차에 못 들렀을 때만
+          <span class="note">니가타역 10:39 → 니시시바타 11:22(43분·440엔) + 도보 1분. 왕복 1시간 반이라 시간 남을 때만.<br><a class="map" href="https://maps.google.com/?cid=9776251242071529136" target="_blank" rel="noopener">이온몰 시바타 지도</a></span></li>
+        <li><span class="t">18:30</span><b>야키니쿠 노소이</b> 니가타에키마에점 <span class="tag ok">예약 완료</span>
+          <span class="note">4인 반개별실. APA에서 도보 6~7분(400m) · 영업 17:00~24:00.<br><a class="map" href="https://maps.google.com/?cid=3371383387978935894" target="_blank" rel="noopener">야키니쿠 노소이 지도</a></span></li>
+        <li><span class="t">밤</span>호텔 복귀 · 여행 마지막 밤
+          <span class="note">짐 미리 싸 두기. 4일차 조식이 08:00이라 늦게까지는 무리예요.</span></li>
       </ol>
     </section>
 
@@ -397,23 +622,103 @@
       <div class="day-head">
         <div class="day-no">4</div>
         <div class="day-title">
-          <b>귀국</b>
-          <span>조식 · 체크아웃 · 공항 이동</span>
+          <b>체크아웃 · 귀국</b>
+          <span>조식 · 공항 이동 · 인천 도착</span>
         </div>
         <div class="date-pill">12.13 일</div>
       </div>
       <ol class="steps">
-        <li><span class="t">오전</span>숙소 조식 · 체크아웃</li>
-        <li><span class="t">이동</span>니가타 공항으로 이동</li>
-        <li><span class="t">귀국</span>인천 도착</li>
+        <li><span class="t">08:00</span>APA 호텔 조식(현장 결제) &amp; 체크아웃
+          <span class="note">08:30까지 식사 마치고 방 정리.</span></li>
+        <li><span class="t">오전</span>니가타역 18번선 리무진 → 공항 <b>08:50 또는 09:15</b>
+          <span class="note">직행 약 25분 · 470엔(전납), Suica 등 IC 카드 가능.<br><b>09:30 도착 목표면 08:50 버스</b>(09:15 도착). 09:15 버스는 09:40 도착인데 11:35편엔 충분해요. 역까지 도보 7분이라 08:50 버스를 타려면 08:40엔 숙소를 나서야 합니다.</span></li>
+        <li><span class="t">09:30</span>니가타공항 도착 · 탑승 수속 · 면세점
+          <span class="note">수속 끝나면 면세점에서 마지막 쇼핑.</span></li>
+        <li><span class="t">11:35</span>니가타(KIJ) 출발 → <b>14:05</b> 인천(ICN) 도착
+          <span class="note">기내에서 《듄》 남은 편. 인천 도착하면 예약주차장에서 차 꺼내 시흥으로.</span></li>
       </ol>
     </section>
 
-    <div class="upcoming">
-      <b>🚧 업데이트 예정</b>
-      <p>상세 일정 · 식당 · 준비물 체크리스트는 이 페이지에 계속 채워집니다.<br>
-      링크는 그대로 두고 새로고침만 하면 항상 최신 내용을 볼 수 있어요.</p>
-    </div>
+    <div class="section-title">준비물 체크리스트</div>
+
+    <section class="card">
+      <div class="ck-head">
+        <b>출발 전 챙길 것</b>
+        <span id="ck-count">0/9</span>
+      </div>
+      <div class="ck-bar"><i id="ck-fill"></i></div>
+      <ul class="ck" id="ck-list">
+        <li><label><input type="checkbox" data-ck="passport"><span class="box"></span><span class="txt"><b>여권</b> — 만료 6개월 이상 남았는지<em>모두 확인. 사진면 한 장 찍어 두면 비상시 편해요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="cash"><span class="box"></span><span class="txt"><b>엔화 현금 · 트래블카드</b><em>시장·작은 이자카야는 현금이 편해요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="plug"><span class="box"></span><span class="txt"><b>110V 어댑터 · 멀티탭</b><em>일본은 100V·A형 플러그. 멀티탭 하나면 넷이 나눠 써요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="battery"><span class="box"></span><span class="txt"><b>보조배터리</b> — 기내 수하물<em>위탁 수하물엔 넣을 수 없어요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="idp"><span class="box"></span><span class="txt"><b>국제운전면허증</b> (현수)<em>제네바 협약판 + 여권 같이. 렌터카 픽업 때 바로 확인해요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="esim"><span class="box"></span><span class="txt"><b>모비 eSIM</b> — 여행 직전 발급<em>구매 후 6일이 지나거나 개통하면 환불이 안 돼서 출발 하루이틀 전에.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="rain"><span class="box"></span><span class="txt"><b>방수 신발 · 따뜻한 아우터 · 우산</b><em>12월 쓰키오카는 비·진눈깨비가 잦아요.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="meds"><span class="box"></span><span class="txt"><b>처방약</b> — 무조건 기내 반입<em>일본어 처방전 · 약국 명세서 · 영수증 · 약 상자까지 같이.</em></span></label></li>
+        <li><label><input type="checkbox" data-ck="dune"><span class="box"></span><span class="txt"><b>《듄》 1·2편 오프라인 저장</b><em>기내 와이파이 없이 봐야 해요.</em></span></label></li>
+      </ul>
+      <button class="ck-reset" id="ck-reset" type="button">체크 초기화</button>
+    </section>
+
+    <div class="section-title">12월 날씨 · 복장</div>
+
+    <section class="card">
+      <b class="card-t">🌧️ 쓰키오카 12/10~11, 최근 3년</b>
+      <p>세 해 모두 <b>최저 2°C · 최고 10°C 안팎</b>에 비나 진눈깨비가 끼었어요. 니가타 시내도 비슷한 기온대입니다.</p>
+      <table class="wx">
+        <tr><th>연도</th><th>12/10</th><th>12/11</th></tr>
+        <tr><td>2023</td><td>이슬비 8~13°C</td><td>흐림, 밤 비 6~10°C</td></tr>
+        <tr><td>2024</td><td>비 2~8°C</td><td>비 2~6°C</td></tr>
+        <tr><td>2025</td><td>진눈깨비 2~5°C</td><td>비·진눈깨비 2~13°C</td></tr>
+      </table>
+      <p>본격적인 눈은 2023년 12/17, 2024년 12/14 밤부터 시작됐어요. <b>소복이 쌓인 설경 온천은 기대를 조금 낮추고</b>, 밤 기온이 2°C까지 떨어지면 진눈깨비 흩날리는 노천탕 정도는 운 좋게 만날 수 있습니다.</p>
+      <p><b>복장</b> — 방수 신발 · 따뜻한 아우터 · 우산은 필수. 실내 난방이 세서 벗기 쉬운 층으로 입으세요.</p>
+    </section>
+
+    <div class="section-title">쇼핑 · 현지 구매</div>
+
+    <section class="card">
+      <b class="card-t">🛍️ 어디서 뭘 살까</b>
+      <ul class="tips">
+        <li><b>이온몰 시바타 1층 coca</b> — 니가타현 유일 매장. 2일차 차량 반납 전이 유일하게 편한 동선.</li>
+        <li><b>러브라 반다이</b> — 유니클로 · GU · 글로벌워크가 한 건물(10:00~20:00). 역에서 도보 9분.</li>
+        <li><b>CoCoLo 니가타</b> — 2층 바카우케 스테이션 센베 스팟과 문구점. <b>학용품</b>은 여기서.</li>
+        <li><b>현지 구매 메모</b> — 학용품 · 운동화 · 멀미약. 운동화는 러브라 반다이, 멀미약은 역 앞 드럭스토어에서.</li>
+      </ul>
+    </section>
+
+    <div class="section-title">지도 모아보기</div>
+
+    <section class="card">
+      <ul class="maplist">
+        <li><a href="https://maps.google.com/?cid=11102908488333533839" target="_blank" rel="noopener"><span class="m"><b>코지마야 총본점 마쓰자키점</b><span class="d">1일차 점심 · 공항에서 9분</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=17675836771346357710" target="_blank" rel="noopener"><span class="m"><b>북방문화박물관</b><span class="d">1일차 오후 · 성인 800엔</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=17945737093079462673" target="_blank" rel="noopener"><span class="m"><b>센케이 료칸</b><span class="d">1일차 숙소 · 쓰키오카 온천</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=9776251242071529136" target="_blank" rel="noopener"><span class="m"><b>이온몰 시바타 (coca 1층)</b><span class="d">2일차 선택 · 료칸에서 15분</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=12656739929488405213" target="_blank" rel="noopener"><span class="m"><b>이마요츠카사 사케 양조장</b><span class="d">2일차 오후 · 역에서 도보 15분</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=5551224370743991501" target="_blank" rel="noopener"><span class="m"><b>APA 호텔 &amp; 리조트 니가타에키마에오도리</b><span class="d">2·3일차 숙소 · 역 북쪽출구 7분</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=4011428493525153067" target="_blank" rel="noopener"><span class="m"><b>폰슈칸 (CoCoLo 메츠관)</b><span class="d">2일차 오후 · 사케 자판기</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=3245094026004741130" target="_blank" rel="noopener"><span class="m"><b>피아반다이</b><span class="d">3일차 아침 · APA에서 도보 12분</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=4717242293801703807" target="_blank" rel="noopener"><span class="m"><b>CoCoLo 니가타</b><span class="d">3일차 낮 · 바카우케 스테이션</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=16145496202669268121" target="_blank" rel="noopener"><span class="m"><b>러브라 반다이</b><span class="d">3일차 낮 · 유니클로·GU·글로벌워크</span></span><span class="go">지도</span></a></li>
+        <li><a href="https://maps.google.com/?cid=3371383387978935894" target="_blank" rel="noopener"><span class="m"><b>야키니쿠 노소이 니가타에키마에점</b><span class="d">3일차 저녁 · 도보 6~7분</span></span><span class="go">지도</span></a></li>
+      </ul>
+    </section>
+
+    <div class="section-title">여행 팁</div>
+
+    <section class="card">
+      <b class="card-t">💡 알면 편한 것들</b>
+      <ul class="tips">
+        <li><b>공항 가는 길</b> — 니가타역 18번선 직행 리무진이 약 25분·470엔(전납). 4번선 각정(E22)은 35분.</li>
+        <li><b>운전</b> — 4WD 렌터카, 운전자는 현수. 국제운전면허증과 여권을 같이 챙기고 반납 전 주유. 진눈깨비 오면 감속.</li>
+        <li><b>료칸 반입</b> — 객실 안 주류·안주는 콜키지 무료. 로비·복도에서는 불투명 가방·봉투로.</li>
+        <li><b>택배</b> — 호텔은 상온 택배만 보관. 송장에 체크인 날짜(12/11)와 예약자 이름을 적어야 하고 쿨택배는 안 됩니다.</li>
+        <li><b>사케 시음</b> — 폰슈칸 시음장은 20세 미만·아이 동반 입장 불가. 시음 후 운전은 절대 금지(2일차는 차 반납 뒤라 괜찮아요).</li>
+        <li><b>결제</b> — 카드가 웬만큼 되지만 시장·작은 가게는 현금이 편해요. IC 카드는 버스·편의점에서 그대로.</li>
+      </ul>
+    </section>
 
     <section class="guest" id="guest">
       <div class="guest-head">
@@ -470,13 +775,56 @@
   }catch(e){}
 
   try{
-    var d = new Date(2026, 10, 25);
+    var d = new Date(2026, 10, 27);
     var u = document.getElementById('updated');
     if (u) {
       u.textContent = '업데이트 ' + d.getFullYear() + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + String(d.getDate()).padStart(2,'0');
     }
   }catch(e){}
 })();
+</script>
+
+<script>
+/* 준비물 체크리스트 — localStorage 저장 */
+(function(){
+  var KEY = 'niigata2026.packing';
+  var list = document.getElementById('ck-list');
+  if (!list) return;
+  var boxes = list.querySelectorAll('input[type="checkbox"]');
+  var countEl = document.getElementById('ck-count');
+  var fillEl = document.getElementById('ck-fill');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(e) { saved = {}; }
+
+  function update(){
+    var done = 0;
+    for (var i = 0; i < boxes.length; i++){ if (boxes[i].checked) done++; }
+    if (countEl) countEl.textContent = done + '/' + boxes.length;
+    if (fillEl) fillEl.style.width = (boxes.length ? Math.round(done * 100 / boxes.length) : 0) + '%';
+  }
+
+  function save(){
+    var o = {};
+    for (var i = 0; i < boxes.length; i++){ o[boxes[i].getAttribute('data-ck')] = boxes[i].checked; }
+    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){}
+  }
+
+  for (var j = 0; j < boxes.length; j++){
+    (function(b){
+      if (saved[b.getAttribute('data-ck')]) b.checked = true;
+      b.addEventListener('change', function(){ save(); update(); });
+    })(boxes[j]);
+  }
+
+  var reset = document.getElementById('ck-reset');
+  if (reset) reset.addEventListener('click', function(){
+    try { localStorage.removeItem(KEY); } catch(e){}
+    for (var k = 0; k < boxes.length; k++){ boxes[k].checked = false; }
+    update();
+  });
+
+  update();
+})()
 </script>
 
 <script>
